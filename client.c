@@ -72,17 +72,6 @@ int main(int argc, char ** argv)
         exit(0);
     }
 
-    /* Do processing
-    */
-    //while(1){
-        /* printf("Please enter the message: ");
-
-        bzero(buffer, LENGTH);
-
-        fgets(buffer, 255, stdin);
-        */
-
-   ssize_t total=0;
    FILE* fp = fopen(argv[3], "rb");
 
    if (fp == NULL){
@@ -91,34 +80,9 @@ int main(int argc, char ** argv)
    }
 
    sendfile(fp, sockfd);
- //puts("Send Success");
    printf("Send Success, NumBytes = %ld\n", total);
    fclose(fp);
    close(sockfd);
-        // if(strncmp(buffer, close_conn, 17) == 0){
-        //     close(sockfd);
-        //     return 0;
-        // }
-        //
-        // if (n < 0)
-        // {
-        //     perror("ERROR writing to socket");
-        //     exit(0);
-        // }
-
-        // bzero(buffer, LENGTH);
-        //
-        // n = read(sockfd, buffer, 255);
-        //
-        // if (n < 0)
-        // {
-        //     perror("ERROR reading from socket");
-        //     exit(0);
-        // }
-        //
-        // printf("%s\n", buffer);
-
-    //}
     return 0;
 }
 

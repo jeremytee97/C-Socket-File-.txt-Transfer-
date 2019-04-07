@@ -84,36 +84,7 @@ int main(int argc, char **argv)
 	}
 	bzero(buffer,256);
 
-		/* Read characters from the connection,
-			then process */
-	//while(1)
-		// n = read(newsockfd,buffer,255);
-		//
-		// if (n < 0)
-		// {
-		// 	perror("ERROR reading from socket");
-		// 	exit(1);
-		// }
-		//
-		// printf("Here is the message: %s\n",buffer);
-		//
-		// if(strncmp(buffer, close_conn, 17) == 0){
-		// 	close(sockfd);
-		// 	return 0;
-        // }
-		//for Q2 purpose
-		// for (int i = 0; i < strlen(buffer); i++){
-		// 	buffer[i] = toupper(buffer[i]);
-		// }
-		//
-		// n = write(newsockfd,buffer,255);
-		//
-		// if (n < 0)
-		// {
-		// 	perror("ERROR writing to socket");
-		// 	exit(1);
-		// }
-
+	//Dummy name - can read from buffer to get actual name from client
 	FILE *fp = fopen("test1.txt", "wb");
     if (fp == NULL)
     {
@@ -128,7 +99,6 @@ int main(int argc, char **argv)
 
     fclose(fp);
     close(newsockfd);
-	//}
 
 	/* close socket */
 
